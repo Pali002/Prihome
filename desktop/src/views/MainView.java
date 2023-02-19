@@ -2,7 +2,7 @@ package views;
 
 import java.util.ArrayList;
 
-import models.Employee;
+import models.Properties;
 
 public class MainView {
     
@@ -10,14 +10,14 @@ public class MainView {
 
     }
 
-    public void outEmployees(ArrayList<Employee> emps) {
-        for(Employee emp: emps) {
+    public void outProperties(ArrayList<Properties> props) {
+        for(Properties prop: props) {
             System.out.printf(
                 "|%15s|%15s|%15s|%15s|\n",
-                emp.getCity(),
-                emp.getAddress(),
-                emp.getSize(),
-                emp.getSalary()
+                prop.getCity(),
+                prop.getAddress(),
+                prop.getSize(),
+                prop.getSalary()
             );
         }
     }

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import models.Employee;
+import models.Properties;
 import models.Restapi;
 import views.MainView;
 
@@ -14,22 +14,22 @@ public class MainController {
     MainView mainView;
     public MainController() {
         this.mainView = new MainView();
-        this.showEmp();
+        this.showProp();
     }
     
-    private void showEmp() {
+    private void showProp() {
         Restapi restapi = new Restapi();
-        String res = restapi.getEmployees();
-        ArrayList<Employee> empList = converStringToArray(res);
-        this.mainView.outEmployees(empList);
+        String res = restapi.getProperties();
+        ArrayList<Properties> propList = converStringToArray(res);
+        this.mainView.outProperties(propList);
     }
 
-    private ArrayList<Employee> converStringToArray(String text) {
-        ArrayList<Employee> empList = null;
+    private ArrayList<Properties> converStringToArray(String text) {
+        ArrayList<Properties> propList = null;
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
-        Employee[] empArray = gson.fromJson(text, Employee[].class);
-        empList = new ArrayList<>(Arrays.asList(empArray));
-        return empList;
+        Properties[] propArray = gson.fromJson(text, Properties[].class);
+        propList = new ArrayList<>(Arrays.asList(propArray));
+        return propList;
     }
 }

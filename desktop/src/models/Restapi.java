@@ -6,11 +6,11 @@ public class Restapi {
     
     }
 
-    public String getEmployees() {
-        
+    public String getProperties() {
+
         HttpClient httpClient = new HttpClient();
         String host = "http://[::1]:3000/";
-        String endpoint = "employees";
+        String endpoint = "properties";
         String urlStr = host + endpoint;
         String res = httpClient.get(urlStr);
 

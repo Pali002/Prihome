@@ -1,12 +1,12 @@
 package models;
 
-public class Employee {
+public class Properties {
     String city;
     String address;
     Double size;
     Double salary;
 
-    public Employee(String city, String address, Double size, Double salary) {
+    public Properties(String city, String address, Double size, Double salary) {
 
         this.city = city;
         this.address = address;
