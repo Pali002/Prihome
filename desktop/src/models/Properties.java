@@ -4,14 +4,14 @@ public class Properties {
     String city;
     String address;
     Double size;
-    Double salary;
+    Double price;
 
-    public Properties(String city, String address, Double size, Double salary) {
+    public Properties(String city, String address, Double size, Double price) {
 
         this.city = city;
         this.address = address;
         this.size = size;
-        this.salary = salary;
+        this.price = price;
     }
 
     public String getCity() {
@@ -32,11 +32,11 @@ public class Properties {
     public void setSize(Double size) {
         this.size = size;
     }
-    public Double getSalary() {
-        return salary;
+    public Double getPrice() {
+        return price;
     }
-    public void setSalary(Double salary) {
-        this.salary = salary;
+    public void setPrice(Double price) {
+        this.price = price;
     }
     
 }
